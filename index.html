@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .container{
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        .name{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        label{
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+        }
+        button{
+            width: 100%;
+            margin-top: 10px;
+            padding: 5px 0;
+        }
+        h2{
+            margin: 5px 0;
+        }
+        h4{
+            margin-top: 15px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="post">
+            <h2>All questions:</h2>
+            <hr>
+        </div>
+        <div class="questions"></div>
+        <div class="feedback">
+            <h2>Add new question:</h2>
+            <form action="">
+                <div class="name">
+                    <label for="input">
+                        <span>Question:</span>
+                        <input id="question" type="text" value="How many letters are there in the word 'Hello' ?">
+                    </label>
+                    <label for="input">
+                        <span>Correct Answer:</span>
+                        <input id="correctAns" type="text" value="5">
+                    </label>
+                    <label for="input">
+                        <span>Wrong answer:</span>
+                        <input id="wrongAns" type="text" value="2">
+                    </label>
+                </div>
+                <button id="addQuestion" class="btn">Add</button>
+            </form>
+        </div>
+    </div>
+    <script src = "main.js"></script>
+</body>
+</html>
